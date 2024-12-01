@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Playwrite+DE+Grund:wght@100..400&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg , #153677 ,  #4e085f);
+    padding: 10px;
+}
+.container .Todo-app {
+    width: 100%;
+    max-width: 540px;
+    padding: 40px 30px 70px;
+    margin: 100px auto 20px;
+    border-radius: 20px;
+    background: #fff;
+    cursor: pointer;
+}
+.container .Todo-app h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container .Todo-app img {
+    width: 40px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+} 
+.container .Todo-app .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+.row input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.row button {
+    border-radius: 9999px; 
+    padding: 16px 50px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: orangered;
+    color: #fff;
+    transition: all 0.7s ease;
+} 
+.row button:hover {
+    transform: scale(1.1);
+}
+
+ul li {
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 17px;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(/IMG/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+
+}
+ul li.checked::before {
+    background-image: url(/IMG/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: red;
+    line-height: 40px;
+    text-align: center;
+    transition: all 0.7s ease;
+}
+ul li span:hover {
+    transform: scale(1.1);
+    color: orange;
+}
